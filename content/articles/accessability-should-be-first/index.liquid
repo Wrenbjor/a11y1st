@@ -1,0 +1,156 @@
+---
+title: 'Accessibility First - Part 1'
+subtitle: 'A11y 1st Should Be The New Web Development Standard'
+featureimg: images/A11y1st_banner_lin.png
+---
+
+<h2 class="title tir is-2 pt-5">{{ subtitle }}</h2>
+<article>
+    <div class="columns is-mobile is-centered mb-5">
+        <div class="column is-8 mt-6">
+            <img src={{
+                 featureimg
+                 }}
+                 alt="Article Logo" />
+        </div>
+    </div>
+    <div class="columns is-mobile is-centered mb-5">
+        <div class="column is-8">
+            <p class="tir">It all starts with empathy. I have been in the software world for over 20 years. While I was at Comcast, I was introduced to how color blindness can effect your work and was quickly made aware of my ignorance to what color blindness is and how some minor planning and thinking can make things better for everyone. I worked in a BI department and made a chart with the good old "Red is bad, Green is good" theme. "This is great! Except for the fact that I can't see shit" was the remark my Director at the time gave to me.</p>
+        </div>
+    </div>
+    <div class="columns is-mobile is-centered mb-5">
+        <div class="column is-6">
+            <img src="images/vaderempathy.jpg"
+                 alt="Darth Vadar is dissapointed with your lack of empathy" />
+        </div>
+    </div>
+    <div class="columns is-mobile is-centered mb-5">
+        <div class="column is-8">
+            <p class="tir">Then I learned about all 3 types of color blindness, and how I could make some simple texture changes and patterns to denote things that had colors that were harder to see. Check out this article below by Penn State that describes some things you can learn on the subject.</p>
+            <a href="https://accessibility.psu.edu/images/charts/">
+
+                <section class="box mt-6 tir has-text-black"
+                         data-title="Charts &amp; Accessibility">
+                    <h1 class="title tir is-2">Charts &amp; Accessibility</h1>
+                    <p class="title tir is-4">Accessibility at Penn State</p>
+                    <p>Page Content Synopsis Text Description Using Tables Color in Charts Charts, graphs and maps use visuals to convey complex images to users. But since they are images, these media provide serious acc…</p>
+                </section>
+            </a>
+            <p class="mt-6 tir">From that point on, I have always called out things that could effect someone experience. Now that I have the awareness and empathy that someone might not see things the same way, I have made it a point to teach everyone that works for me to be thinking about color and to think about the impact it could have if they are not thinking about it. Now, fast forward to me joining Tamman in 2018. I was told, from day one "We are focused on accessibility, because we believe that everyone should have access to all information. We don't do it because we were asked, we do it because it's the right thing to do".</p>
+        </div>
+    </div>
+    <div class="columns is-mobile is-centered mb-5">
+        <div class="column is-8">
+            <p class="tir">
+                I lead both a 6 person development team as well as a 2 person QA team. The development team worked with React and the QA team would build custom test automations in PHP using Codeception. Because of the modular way React Components worked, we where able to focus on creating something like an information table that worked great with a screen reader as well as keyboard navigation. The QA team was able to build automated tests that looked for that kind of functionality in the components.
+            </p>
+        </div>
+    </div>
+    <div class="columns is-mobile is-centered mb-5">
+        <div class="column is-8">
+
+
+            <h2 class="title tir is-2">
+                Introducing The Web Content Accessibility Guidelines (WCAG - "Wu-Kag")
+            </h2>
+
+
+            <p class="tir">
+                Wikipedia has a great description: "The&nbsp;<strong>Web Content Accessibility Guidelines</strong>&nbsp;(<strong>WCAG</strong>) are part of a series of&nbsp;<a href="https://en.wikipedia.org/wiki/Web_accessibility">web accessibility</a>&nbsp;guidelines published by the&nbsp;<a href="https://en.wikipedia.org/wiki/Web_Accessibility_Initiative">Web Accessibility Initiative</a>&nbsp;(WAI) of the&nbsp;<a href="https://en.wikipedia.org/wiki/World_Wide_Web_Consortium">World Wide Web Consortium</a>&nbsp;(W3C), the main international standards organization for the Internet. They are a set of recommendations for making Web content more accessible, primarily for people with&nbsp;<a href="https://en.wikipedia.org/wiki/Disabilities">disabilities</a>—but also for all&nbsp;<a href="https://en.wikipedia.org/wiki/User_agent">user agents</a>, including highly limited devices, such as mobile phones. WCAG 2.0, was published in December 2008 and became an&nbsp;<a href="https://en.wikipedia.org/wiki/International_Organization_for_Standardization">ISO</a>&nbsp;standard, ISO/IEC 40500:2012 in October 2012. WCAG 2.1 became a W3C Recommendation in June 2018." WCAG 2.2 is still in Draft at this time.
+
+            </p>
+
+
+            <p class="tir">
+                But what does that all mean? Well, going back to my color blind story from before: In the chart article we see that it points to <a href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a> and <a href="https://www.w3.org/TR/WCAG21/#use-of-color">1.4.1 Use of Color</a>. Both of these sections tell you how to address a chart (1.1.1) and how to treat color in general (1.4.1). As you dig into this more, you start to see how much can go into accessibility.
+
+            </p>
+        </div>
+    </div>
+    <div class="columns is-mobile is-centered mb-5">
+        <div class="column is-8">
+            <h2 class="title tir is-2">
+                Accessibility First, then Mobile
+            </h2>
+
+
+            <p class="tir">
+                Really, it's both at the same time. Let's start at the design phase. Here is an example I pulled from <a href="https://dribbble.com/maciejkarolczak">Maciej Karolczak</a>
+
+            </p>
+
+
+            <img src="images/mobilelink.png"
+                 alt="Preview of poor color choices" />
+        </div>
+    </div>
+    <div class="columns is-mobile is-centered mb-5">
+        <div class="column is-8">
+            <p class="tir">
+                So, if you don't have an issue with color blindness or other vision issues, Chances are you are looking at a "cutting edge" music app that is showing lyrics. The colors you see fit in their pallet from a design standpoint but this is the perfect example of an opportunity to put accessibility first before working on the code.
+
+            </p>
+
+
+            <p class="tir">
+                I like to use the <a href="https://webaim.org/resources/contrastchecker/">WebAIM Contrast Checker</a>. This tool really helps to quickly identify contrast issues that will make a poor user experience for anyone with site or color issues.
+            </p>
+        </div>
+    </div>
+    <div class="columns is-mobile is-centered mb-5">
+        <div class="column is-8">
+            <p class="tir">
+                Here is the contrast readout for the right side primary colors, as you can (hopefully) see, "baby I had to mention" and below are almost the same color as the background so they will fail without question
+            </p>
+
+
+            <img src="images/contrast1.png"
+                 alt="Web AIM contrast checker display" />
+
+            <p class="tir">
+                And here is the left side:
+
+            </p>
+
+            <img src="images/contrast2.png"
+                 alt="Web AIM contrast checker display" />
+        </div>
+    </div>
+    <div class="columns is-mobile is-centered mb-5">
+        <div class="column is-8">
+            <p class="tir">
+                <a href="http://www.w3.org/TR/WCAG20/">WCAG 2</a>&nbsp;level AA requires a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text, and a contrast ratio of at least 3:1 for graphics and user interface components (such as form input borders). Level AAA requires a contrast ratio of at least 7:1 for normal text and 4.5:1 for large text.
+
+            </p>
+
+
+            <p class="tir">
+                Large text is defined as 14 point (typically 18.66px) and bold or larger, or 18 point (typically 24px) or larger.
+
+            </p>
+
+
+            <p class="tir">
+                Now that I am no longer at Tamman, I still carry this mission with me and make sure that it is in everything we do at WCR Studios. My agency is still growing but as I take on new clients I know that everything that we build will be done with the same care and oversite that I gave to my teams in my previous roles.
+
+            </p>
+        </div>
+    </div>
+    <div class="columns is-mobile is-centered mb-5">
+        <div class="column is-8">
+
+
+
+            <h2 class="title tir is-2">
+                Part 1 Conclusion
+            </h2>
+
+
+            <p class="tir">
+                Starting with the color in your design is crucial to providing a great UX. Poor color choice and and the lack of consideration of contrast can make or break your site when it comes to accessibility. Feel free to reach out to me if you have any questions.
+
+            </p>
+        </div>
+    </div>
+</article>

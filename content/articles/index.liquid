@@ -1,0 +1,29 @@
+---
+layout: layout.liquid
+eleventyExcludeFromCollections: true
+---
+
+<div class="columns is-mobile is-centered">
+    <div class="column is-6">
+        {% if collections.articles %}
+        {%- for article in collections.articles %}
+        <article class="media">
+            <figure class="media-left">
+                <p class="image is-128x128">
+                    <img src="{{ article.url | concat: article.data.featureimg }}">
+                </p>
+            </figure>
+            <div class="media-content">
+                <div class="content">
+                    <p class="tir title is-2 has-text-left ml-4">
+                        <a href="{{article.url}}">{{ article.data.title }}<br><span class="title is-4">{{ article.data.subtitle }}</span></a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        {% endfor %}
+        {% else %}
+        <h2 class="tir">No Articles Found</h2>
+        {% endif%}
+    </div>
+</div>

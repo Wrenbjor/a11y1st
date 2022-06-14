@@ -1,0 +1,34 @@
+@font-face {
+  font-family: "OpenDyslexicRegular";
+  src: local("OpenDyslexicRegular"),
+  url("/fonts/OpenDyslexic-Regular.otf") format("OpenType");
+  font-weight:normal;  
+}
+
+@font-face {
+  font-family: "OpenDyslexicBold";
+  src: local("OpenDyslexicBold"),
+  url("/fonts/OpenDyslexic-Bold.otf") format("OpenType");
+  font-weight:bold;  
+}
+@font-face {
+  font-family: "OpenDyslexicItalic";
+  src: local("OpenDyslexicItalic"),
+  url("/fonts/OpenDyslexic-Italic.otf") format("OpenType");
+  font-weight:italic;  
+}
+
+@font-face {
+  font-family: "TiresiasInfofont";
+  src: local("TiresiasInfofont"),
+  url("/fonts/Tiresias_Infofont.ttf") format("truetype");
+  font-weight: normal;
+}
+
+.tir {
+  font-family: "TiresiasInfofont";
+  font-size:16px;
+}
+.dd {
+  font-family: "OpenDyslexicRegular";
+}
