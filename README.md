@@ -9,4 +9,6 @@ A11y1st is not about leading by example or leading from behind. Representation a
 
 
 # Grow with us 
-A11y1st comes from the experience of Wayne Renbjor, the owner of WCR Studios (A Marketing and Web Agency) in the South Jersey and Philadelphia area. 
+A11y1st comes from the experience of Wayne Renbjor, the owner of WCR Studios (A Marketing and Web Agency) in the South Jersey and Philadelphia area. We are looking for article writers! Articles require their own sub folder. Any supported images must be places in the images subfolder for the article. Supported formats for content is Liquid templates. Supported formats for images is png, jpg, and svg.
+
+Please contact Wayne with an article idea. You will need to submit a new PR for the article, we also prefer that the article lighthouse tests at 95% or above for accessibility. If there is nothing more than texts, images, and links it should test at 100%.
