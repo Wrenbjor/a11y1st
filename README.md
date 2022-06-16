@@ -19,7 +19,7 @@ Templating system is [Liquid](https://liquidjs.com/tutorials/intro-to-liquid.htm
 
 The static code generation is [11ty](https://www.11ty.dev/). 11ty supports several templating methods. You are welcome to use Markdown if you like but you lose styling capability.
 
-The Source Control is manages on [Github](https://github.com/Wrenbjor/a11y1st) using a [classic Git-Flow](https://datasift.github.io/gitflow/IntroducingGitFlow.html) branch model with the only modification is that Github now uses 'main' in favor of 'master' as a primary branch. Once you clone the repo, please checkout the 'development' branch then start a new 'feature' for your new article or submit corrections to an article that already exists. You will have to submit a pull request (PR) to have your branch reviewed for the following:
+The Source Control is manages on [Github](https://github.com/Wrenbjor/a11y1st) using a [classic Git-Flow](https://datasift.github.io/gitflow/IntroducingGitFlow.html) branch model with the only modification is that Github now uses 'main' in favor of 'master' as a primary branch. Once you clone the repo, please checkout the 'develop' branch then start a new 'feature' for your new article or submit corrections to an article that already exists. You will have to submit a pull request (PR) to have your branch reviewed for the following:
 
 - Spelling
 - Grammar
