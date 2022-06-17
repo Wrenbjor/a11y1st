@@ -59,9 +59,13 @@
                     </nav>
                 </section>
             </div>
+            {% if title %}
             <header>
-                <h1 class="title is-1 tir is-size-3-mobile m-2">{{title}}</h1>
+                <h1 class="title is-1 tir is-size-3-mobile m-2">{{title}}</h1><br>
+                <h2 class="title tir is-2 pt-5 is-size-5-mobile m-2">{{ subtitle }}</h2><br>
+                <p class="title tir is-5 is-size-6-mobile m-2">{{ pubdate }} - {{ author }}</p>
             </header>
+            {% endif %}
             {{content}}
             <div>
                 <footer class="footer">
