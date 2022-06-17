@@ -11,7 +11,7 @@ A11y1st comes from the experience of Wayne Renbjor, the owner of WCR Studios (A 
 
 Please contact Wayne with an article idea. You will need to submit a new PR for the article, we also prefer that the article lighthouse tests at 95% or above for accessibility. If there is nothing more than texts, images, and links it should test at 100%.
 
-# Project info
+# Project info and Development Process
 
 Templating system is [Liquid](https://liquidjs.com/tutorials/intro-to-liquid.html). This mixes HTML with "{{ }}" vars.
 
@@ -29,4 +29,77 @@ The Source Control is manages on [Github](https://github.com/Wrenbjor/a11y1st) u
   - Aria tags when necessary
 - Relevance to the Accessibility Development and Design community
 
+----
 
+## Starting A New Article
+
+When creating a new article, first create a new 'feature' branch using 
+
+```bash
+git flow feature start feature/article-name-goes-here
+```
+use [Kebab-case](https://www.theserverside.com/definition/Kebab-case) naming conventions which-have-a-dash-for-each-space.
+Any images should be stored in an 'images' subfolder within your article directory.
+
+Use ``` yarn start ``` to start the 11ty realtime local server for development purposes.
+
+Please create an ``` index.liquid ``` file as the main article body. We also ask that you include the following metadata:
+
+```liquid
+
+---
+title: 'Your articles main title'
+subtitle: 'A subtitle for clarity'
+featureimg: images/featuredImage.png
+---
+
+```
+
+A title is the main title of the article, please try to keep this short.
+A subtitle can also be added.
+Please inclue a featured image of 800x600 or a (4x3) dimention as it is used with the title and subtitle in the main page listing.
+
+The primary article template has a placeholder for the title and subtitle so you do not need to include it in your own article. Please reffer to any existing article as examples.
+
+We are using the[Bulma CSS Framework](https://bulma.io/documentation/) for styling. Here is a simple template you can use to start a new article:
+
+```html
+
+---
+title: 'Your articles main title'
+subtitle: 'A subtitle for clarity'
+featureimg: images/featuredImage.png
+---
+
+
+<article class="tir">
+    <div class="columns is-mobile is-centered mb-5">
+        <div class="column is-8 mt-6">
+            <img src={{ featureimg }} alt="Article Logo" />
+        </div>
+    </div>
+    <div class="columns is-mobile is-centered mb-5">
+        <div class="column is-8">
+          <p>Content</p>
+        </div>
+    </div>
+</article>
+
+```
+
+The class named 'tir' is a font class. We use a publicly available font called [Tiresias InfoFont](https://www.fontsquirrel.com/fonts/Tiresias-Infofont) which was designed by the [Royal National Institute of Blind People](https://www.rnib.org.uk/) specifically for accessibility readability for people with eyesight that is starting to deterriate.
+
+Your article is not required to use this font, but we think it looks great!
+
+----
+## Building and Submitting Code
+
+Use ``` yarn build ``` to run the 11ty build system which is already configured for the production folder formats and 11ty configurations.
+
+Once your build is complete, commit your feature branch then run 
+```bash 
+git flow feature finish article-name-goes-here
+```
+note that when you make the feature you prefix the folder with ``` 'feature/' ```  but when you finish it, the prefix is not required.
+
+Once your changes have merged into ``` 'develop' ``` you can then push your branch and create a pull request.
