@@ -10,7 +10,9 @@ eleventyExcludeFromCollections: true
         <div>
             <figure class="media-left">
                 <p class="image is-128x128">
-                    <img src="{{ article.url | concat: article.data.featureimg }}">
+                    <img src="{{ article.url | concat: article.data.featureimg }}"
+                         alt=""
+                         aria-hidden="true">
                 </p>
             </figure>
         </div>
